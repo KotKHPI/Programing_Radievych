@@ -8,7 +8,6 @@ switch(command) {
 	case 'l' : 2 * PI * R; break;
 	case 's' : PI * R * R; break;
 	case 'v' : 4/3 * PI* R * R  * R; break;
-	default : 5;
 }
 	return 0;
 }
