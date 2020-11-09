@@ -1,0 +1,48 @@
+[1mdiff --git a/src/lib.c b/src/lib.c[m
+[1mindex 56582cf..49b3309 100644[m
+[1m--- a/src/lib.c[m
+[1m+++ b/src/lib.c[m
+[36m@@ -22,8 +22,11 @@[m [mchar *get_animal_type_name(enum animal_type type)[m
+ 	case COW:[m
+ 		result = "Корова";[m
+ 		break;[m
+[31m-	case PIG:[m
+[31m-		result = "Свиня";[m
+[32m+[m	[32mcase WOLF:[m
+[32m+[m		[32mresult = "Вовк";[m
+[32m+[m		[32mbreak;[m
+[32m+[m	[32mcase HUMAN:[m
+[32m+[m		[32mresult = "Людина";[m
+ 		break;[m
+ 	default:[m
+ 		result = "N/A";[m
+[1mdiff --git a/src/lib.h b/src/lib.h[m
+[1mindex 2d3728e..7493a39 100644[m
+[1m--- a/src/lib.h[m
+[1m+++ b/src/lib.h[m
+[36m@@ -25,10 +25,11 @@[m
+  * Тип тварини[m
+  */[m
+ enum animal_type {[m
+[31m-	PIG, /**< Свиня */[m
+[32m+[m	[32mWOLF, /**< Вовк */[m
+ 	COW, /**< Корова */[m
+ 	DOG, /**< Собака */[m
+ 	CAT, /**< Кіт */[m
+[32m+[m	[32mHUMAN, /**< Людина */[m
+ 	ANIMAL_TYPE_COUNT /**< Кількість тварин */[m
+ };[m
+ [m
+[1mdiff --git a/test/test.c b/test/test.c[m
+[1mindex b8d80bf..9700fe5 100644[m
+[1m--- a/test/test.c[m
+[1m+++ b/test/test.c[m
+[36m@@ -23,7 +23,7 @@[m [munsigned short test_get_animal_by_name()[m
+ #define DATA_SIZE 6[m
+ [m
+ 	unsigned short is_success = 1;[m
+[31m-	enum animal_type input_data[] = { CAT, DOG, COW, PIG, ANIMAL_TYPE_COUNT, ANIMAL_TYPE_COUNT + 1 };[m
+[32m+[m	[32menum animal_type input_data[] = { CAT, DOG, COW, WOLF, HUMAN, ANIMAL_TYPE_COUNT, ANIMAL_TYPE_COUNT + 1 };[m
+ 	char *expected_values[] = { "Кіт",   "Собака", "Корова",[m
+ 				    "Свиня", "N/A",    "N/A" };[m
+ [m

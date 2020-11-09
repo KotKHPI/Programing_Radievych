@@ -8,14 +8,10 @@ clean:
 	rm -rf dist
 prep:
 	mkdir dist
-compile: main.bin test.bin
+compile: main.bin 
 
 main.bin: src/main.c
 	$(CC) $(C_OPTS) $< -o ./dist/$@
-test.bin: test/test.c
-	$(CC) $(C_OPTS) $< -o ./dist/$@
-test: clean prep compile
-	./dist/test.bin
 run: clean prep compile
 	./dist/main.bin
 doxygen:
