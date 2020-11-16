@@ -1,4 +1,3 @@
-#include "lib.h"
 int main()
 {
 	int a = 1; // это а1

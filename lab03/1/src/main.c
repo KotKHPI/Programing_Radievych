@@ -1,4 +1,3 @@
-#include "lib.h"
 int main()
 {
 	int r1, r2, r3, R; // усі резистори
