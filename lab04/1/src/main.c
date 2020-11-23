@@ -6,16 +6,13 @@ int main()
 	float result;
 switch(command) {
 	case 'l' :
-	float l = 2 * PI * R;
-	result = l;
+	result = 2 * PI * R;
 	break;  //при виборі команди "l" буде виконуватися така дія
 	case 's' :
-	float s = PI * R * R;
-	result = s;
+	result = PI * R * R;
 	break; // при виборі команди "s" буде виконуватися така дія
 	case 'v' :
-	float v = 4/3 * PI* R * R  * R;
-	result = v;
+	result = 4/3 * PI* R * R  * R;
 	break; // при виборі команди "v" буде виконуватися така дія
 }
 	return 0;
