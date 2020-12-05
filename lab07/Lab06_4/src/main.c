@@ -3,6 +3,7 @@
 
 int checkSymbols(char text[], int a); //
 int wordCount(char text[], int result, int a);
+
 int main() {
     srand(time(NULL));
     
