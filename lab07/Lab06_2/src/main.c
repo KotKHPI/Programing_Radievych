@@ -3,6 +3,7 @@
 
 #define N 50 // розмір масиву з простими числами
 int check_prime_num (int a, int check);
+
 int main() {
     srand(time(NULL));
     
