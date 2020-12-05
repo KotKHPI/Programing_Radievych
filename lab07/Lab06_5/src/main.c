@@ -1,8 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #define N 3 // розмір матриці в N*N
-int matrixEl(int matrixA[N][N]);
-int main() {
+
+void matrixEl(int matrixA[N][N]);
+
+int main() { /*Функція main: формує масив с заданої кількості елементів з випадковими значенями від 0 до 10. Викликає функцію matrixEl*/
+    
     srand(time(NULL));
     
     int matrixA [N][N];
@@ -15,7 +18,8 @@ int main() {
     
     return 0;
 }
-int matrixEl(int matrixA[N][N]) {
+void matrixEl(int matrixA[N][N]) { /*Функція matrixEl: виконує цинлічне зрушення елементів рядка масиву в напрямку справа наліво*/
+    
     for (int i = 0; i < N; i++) { // перебір ряду матриці
         int temp = matrixA[i][0]; // зберігаємо перші елементи першого столбця матриці, бо при запуску циклів вони будуть втрачені
             for (int b = 0; b < N; b++) { // перебір стовбця матриці
@@ -23,5 +27,4 @@ int matrixEl(int matrixA[N][N]) {
             }
         matrixA[i][N-1] = temp; // переміщаємо перші елементи першого стовбця матриці на останній стовбець матриці
     }
-    return matrixA;
 }
