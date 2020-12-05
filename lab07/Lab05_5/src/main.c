@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
+
 int square_number (int a);
+
 int main() {
     srand(time(NULL));
     
