@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+
 int prime_number (int a); // прототип функції
 
 int main() {
