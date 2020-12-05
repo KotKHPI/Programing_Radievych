@@ -4,7 +4,7 @@
 int cycle_for (int num);
 int cycle_while (int num);
 int cycle_do_while (int num);
-int comparison (int a, b, c);
+int comparison (int a, int b, int c);
 
 int main() { /*Функція main: формує масив с заданої кількості елементів з випадковими значенням від 100 000 до 999 999. Викликає функцію cycle_for, cycle_while, cycle_do_while, comparison*/
     
