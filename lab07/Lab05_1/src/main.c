@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
+
 int NSD (int a, int b); // прототип функції
+
 int main() {
     srand(time(NULL));
     int a = rand() % 50; // випадкове число ділемо з остачою на задане число, тим самим задаючи діапазон випадкого числа від 0 до 50
