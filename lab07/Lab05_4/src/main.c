@@ -2,6 +2,7 @@
 #include <time.h>
 
 int unique_number (int a);
+
 int main() {
     srand(time(NULL));
     
