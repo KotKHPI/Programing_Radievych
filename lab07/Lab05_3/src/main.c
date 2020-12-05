@@ -1,22 +1,29 @@
 #include <stdlib.h>
 #include <time.h>
+
 int cycle_for (int num);
 int cycle_while (int num);
 int cycle_do_while (int num);
 int comparison (int a, b, c);
 
-int main() {
- srand(time(NULL));
+int main() { /*Функція main: формує масив с заданої кількості елементів з випадковими значенням від 100 000 до 999 999. Викликає функцію cycle_for, cycle_while, cycle_do_while, comparison*/
+    
+    srand(time(NULL));
+    
  int num = rand() % 899999 + 100000; // випадкове число ділемо з остачою на задане число та додаємо певне значення, сміщуючи діапазон правору відповідно системи координат, тим самим задаючи діапазон випадкого числа від 100 000 до 999 999
+    
  int result_for = cycle_for(num); //якщо результат -1, то білет не щасливий, а якщо 1 - то щасливий
+    
  int result_while = cycle_while(num); //якщо результат -1, то білет не щасливий, а якщо 1 - то щасливий
+    
  int result_do_while = cycle_do_while(num); //якщо результат -1, то білет не щасливий, а якщо 1 - то щасливий
-    int result_comparison = comparison(result_for, result_while, result_do_while); //якщо результат -1, то значення цинклів не збігаються , а якщо 1 - значення цинклів не збігаються
+
+ int result_comparison = comparison(result_for, result_while, result_do_while); //якщо результат -1, то значення цинклів не збігаються , а якщо 1 - значення цинклів не збігаються
 
 return 0;
 }
 
-int cycle_for (int num) {
+int cycle_for (int num) { /*Функція cycle_for: перевіряє чи є задане число "щасливим" за допомогою циклу for*/
     int f1 = num / 1000; //виділяємо просто першу половину числа num
     int f2 = num % 1000; //виділяємо просто другу половину числа num
     int half1 = 0; //сума першої половини
@@ -37,7 +44,7 @@ int cycle_for (int num) {
     return check;
 }
 
-int cycle_while (int num) {
+int cycle_while (int num) {/*Функція cycle_while: перевіряє чи є задане число "щасливим" за допомогою циклу while*/
     int f1 = num / 1000; //виділяємо просто першу половину числа num
     int f2 = num % 1000; //виділяємо просто другу половину числа num
     int half1 = 0;
@@ -67,7 +74,7 @@ int cycle_while (int num) {
     return check;
 }
 
-int cycle_do_while (int num) {
+int cycle_do_while (int num) {/*Функція cycle_do_while: перевіряє чи є задане число "щасливим" за допомогою циклу do_while*/
     int f1 = num / 1000; //виділяємо просто першу половину числа num
     int f2 = num % 1000; //виділяємо просто другу половину числа num
     int half1 = 0;
@@ -97,7 +104,7 @@ int cycle_do_while (int num) {
     return check;;
 }
 
-int comparison (int a, b, c) {
+int comparison (int a, int b, int c) { /* Функція comparison: перевіряє чи є задані числа однаковими*/
     int result = 0;
     if (a == b == c) {
         result = 1;
