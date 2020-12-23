@@ -1,7 +1,7 @@
 ## Common Project info
 PROJECT_NAME = "Lab11 (3)"
 PROJECT_BRIEF = "Вступ до показчиків"
-PROJECT_NUMBER = 0.1
+PROJECT_NUMBER = 1.0
 
 ## output options
 OUTPUT_DIRECTORY = ./dist

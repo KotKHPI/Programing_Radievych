@@ -18,6 +18,7 @@
  */
 
 #include "lib.h"
+#include <malloc.h>
 
 /**
  * Головна функція.
@@ -62,10 +63,16 @@ int main() {
     
     fillingResult(pResult, pNumber, r_size, r_start);
     
+    *alloca(pResult);
+    *alloca(pNumber);
     free(pResult);
     free(pNumber);
-    free(r_size);
-    free(r_start);
-    free(r_amount_division);
+    *alloca(r_size);
+    //free(r_size);
+    *alloca(r_start);
+    //free(r_start);
+    *alloca(r_amount_division);
+    //free(r_amount_division);
+    
     return 0;
 }

@@ -1,5 +1,5 @@
 targets = main.bin
-CC = gcc
+CC = clang
 C_OPTS = -std=gnu11 -g -Wall -Wextra -Wformat-security -Wfloat-equal -Wshadow -Wconversion -Wlogical-not-parentheses -Wnull-dereference -I./src 1/src/lib.c 2/src/lib.c 3/src/lib.c 4/src/lib.c
 
 all: clean prep compile
