@@ -12,6 +12,7 @@ compile:
 	$(CC) $(C_OPTS) -g 1/src/main.c -v 1/src/lib.c -o dist/1.bin
 	$(CC) $(C_OPTS) -g 2/src/main.c -v 2/src/lib.c -o dist/2.bin
 	$(CC) $(C_OPTS) -g 3/src/main.c -v 3/src/lib.c -o dist/3.bin
+	$(CC) $(C_OPTS) -g 4/src/main.c -v 4/src/lib.c -o dist/4.bin
 
 doxygen:
 	doxygen Doxyfile
