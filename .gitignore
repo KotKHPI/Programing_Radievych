@@ -1,2 +1,3 @@
 dist/
 .xcodeproj
+.DS_Store
