@@ -55,6 +55,7 @@ int main() {
     char *symbols = (char*) malloc ((uniqueElCount + 1) * sizeof(char)); /**покажик на рядкок в якому будуть усі унікальні символи*/
     int *symbols_counts = (int*) malloc (uniqueElCount * sizeof(int)); /**покажчик на масив, в якому указано кількість слів, що дублюється*/
     float *symbols_frequency = (float*) malloc (uniqueElCount * sizeof(float)); /**покажик на масив, в якому указано частоту появи символів, які задано в тексті*/
+    
     fill_zeros(symbols_counts, uniqueElCount);
 
     get_symbols(p_Text, text_length, symbols);
