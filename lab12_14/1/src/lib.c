@@ -57,7 +57,7 @@ int find_det (int** p_matrix, int column, FILE *fmatrix) {
 void free_matrix(int** p_matrix, int column, int row) {
     for (int i = 0; i < column; i++) {
         for (int j = 0; j < row; j++) {
-            free(*(*(p_matrix +i) + j));
+            free(*((p_matrix +i) + j));
         }
     }
     free(*p_matrix);
