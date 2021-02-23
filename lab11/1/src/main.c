@@ -4,6 +4,7 @@ int main() {
     srand(time(NULL));
     
     int *pNumber = (int*)malloc(N * sizeof(int)); //виділення пам'яті на N кількість елементів
+    
     fillinArr(pNumber);
     
     sortArr(pNumber);
