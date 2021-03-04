@@ -34,46 +34,56 @@ typedef struct {
     int height; //см
     int number_of_feeders;
     enum Yes_no nest_nest; //да, нет
-} feature;
+} Feature;
 
 typedef struct {
     enum Yes_no label; //да, нет
     char name[15]; //петух, жаравель и тд
     int age; //месяцов
-    feature home;
+    Feature home;
     enum Sex sex; //мужской, женский
-} basic;
+} Basic;
 
 
 int main() {
-    FILE *birds;
+    FILE *birds_info;
     char name_file[30] = "0";
     printf("Введіть імя файлу з текстом (шлях до файлу): ");
     scanf("%s", name_file);
     
-    birds = fopen(name_file, "r+");
-    check_file(birds);
+    birds_info = fopen("/Users/whatislove/birds.txt", "r+"); //name_file
+    check_file(birds_info);
+    
+    printf("Кількість птиць: ");
+    int count_birds;
+    scanf("%d", &count_birds);
+    
+    /*struct Basic ** p_bird = malloc(count_birds * sizeof(struct Basic*));
+    for (int i = 0; i < 2000; i++) {
+        *(p_bird + i) = malloc(sizeof(struct Basic*));
+    }*/
+    
+    Basic* bird1 = malloc(sizeof(Basic));
+    Basic* bird2 = malloc(sizeof(Basic));
+    Basic* bird3 = malloc(sizeof(Basic));
     
     
-    //TO DO
-    struct feature* count; // = (struct feature*)malloc(50)
-    struct basic* bird; // = (struct basic*)malloc(100)
+    fscanf(birds_info, "%d %s %d %d %d %d %d %d", &bird1->label, bird1->name, &bird1->age, &bird1->home.square, &bird1->home.height, &bird1->home.number_of_feeders, &bird1->home.nest_nest, &bird1->sex);
     
-    fscanf(birds, "%d %s %d %d %d %d %d %d", struct basic bird->label, struct basic bird->name, struct basic bird->);
-    /*
-    int k = check_count(birds);
+    fscanf(birds_info, "%d %s %d %d %d %d %d %d", &bird2->label, bird2->name, &bird2->age, &bird2->home.square, &bird2->home.height, &bird2->home.number_of_feeders, &bird2->home.nest_nest, &bird2->sex);
     
-    int *p_array = (int*)malloc(k * sizeof(int));
+    fscanf(birds_info, "%d %s %d %d %d %d %d %d", &bird3->label, bird3->name, &bird3->age, &bird3->home.square, &bird3->home.height, &bird3->home.number_of_feeders, &bird3->home.nest_nest, &bird3->sex);
     
-    view_file_array(p_array, birds, k);
-    
-    fprintf(birds, "\nКожному значенню з заданого масиву добовлено одиницю\nНовый масив чисел:");
-    for(int i = 0; i < k; i++) {
-        *(i + p_array) += 1;
-        fprintf(birds, "%d", *(i + p_array));
+    /*if (bird2->label == 0) {
+        printf("Так ");
+    }
+    if (bird2->label == 1) {
+        printf("Нить ");
     }
     
-    free(p_array); */
-    fclose(birds);
+    printf("%s %d %d %d %d %d %d", bird2->name, bird2->age, bird2->home.square, bird2->home.height, bird2->home.number_of_feeders, bird2->home.nest_nest, bird2->sex);*/
+    
+    //free Basic** TODO
+    fclose(birds_info);
     return 0;
 }

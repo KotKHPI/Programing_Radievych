@@ -20,7 +20,3 @@
  *Функція перевіряє знаходження файлу по заданія дерикторії
  */
 void check_file (FILE *fmatrix);
-
-int check_count (FILE *file);
-
-void view_file_array (int *p_array, FILE *file, int k);
