@@ -49,12 +49,12 @@ typedef struct {
  */
 void check_file (FILE *fmatrix);
 
-void scanning (Basic* p_bird, int count_birds, FILE *birds_info);
+void scanning (Basic* p_bird, int count_birds, FILE *birds_info); //test
 
-void sort_by_age (Basic* p_bird, int count_birds);
+void sort_by_age (Basic* p_bird, int count_birds); //test
 
 void output_file (Basic* p_bird, int count_birds, FILE* out_info);
 
-void random_elements (Basic* p_bird, int count_birds);
+void random_elements (Basic* p_bird, int count_birds); //test
 
 void output_monitor (Basic* p_bird, int count_birds);
