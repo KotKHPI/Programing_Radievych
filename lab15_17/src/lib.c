@@ -69,11 +69,6 @@ void output_file (Basic* p_bird, int count_birds, FILE* out_info) {
 
 void random_elements (Basic* p_bird, int count_birds) {
     for(int f = 0; f < count_birds; f++) {
-        //int i = rand() % 2;
-        //char i_c = i + '0';
-        //char tmp[] = "Птах № ";
-        //strcat(tmp, i_c);
-        
         (p_bird + f)->label = rand() % 2;
         (p_bird + f)->age = rand() % 208 + 23;
         (p_bird + f)->home.square = rand() % 208 + 23;
