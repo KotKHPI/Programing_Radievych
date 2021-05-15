@@ -18,7 +18,13 @@
  * тестів не пройшла
  */
 
-/*unsigned short test_creative_element() {
+unsigned short test_creative_element() {
+#ifdef DEBUG
+    printf("Функція: %s\n", __PRETTY_FUNCTION__);
+#endif
+#ifdef DEBUG
+    long begin = currentTimeMillis();
+#endif
     printf("Запуск тесту %s ... \n", __FUNCTION__);
     unsigned short is_success = 1;
     Basic* data = (Basic*)malloc(sizeof(Basic));
@@ -53,10 +59,14 @@
     
     free(expected_data);
     free(data);
+#ifdef DEBUG
+    long end = currentTimeMillis();
+    printf("Загальний час виконання тесту %s: %ld sec\n", __FUNCTION__ ,(end-begin)/1000);
+#endif
     return is_success;
 }
 
-*
+/**
  * Верифікація роботи функції {@link delete_once}
  * на основі набора вхідних та очікуваних даних
  *
@@ -64,6 +74,12 @@
  * тестів не пройшла
  */
 unsigned short test_delete_once() {
+#ifdef DEBUG
+    printf("\nФункція: %s\n", __PRETTY_FUNCTION__);
+#endif
+#ifdef DEBUG
+    long begin = currentTimeMillis();
+#endif
     unsigned short is_success = 1;
     printf("Запуск тесту %s ... \n", __FUNCTION__);
     
@@ -95,6 +111,10 @@ unsigned short test_delete_once() {
     
     free(expected_data);
     free(data);
+#ifdef DEBUG
+    long end = currentTimeMillis();
+    printf("Загальний час виконання тесту %s: %ld sec\n", __FUNCTION__ ,(end-begin)/1000);
+#endif
     return is_success;
 }
 
@@ -106,6 +126,12 @@ unsigned short test_delete_once() {
  * тестів не пройшла
  */
 unsigned short test_sort_by_age() {
+#ifdef DEBUG
+    printf("\nФункція: %s\n", __PRETTY_FUNCTION__);
+#endif
+#ifdef DEBUG
+    long begin = currentTimeMillis();
+#endif
     unsigned short is_success = 1;
     printf("Запуск тесту %s ... \n", __FUNCTION__);
     Basic* data = (Basic*)malloc(sizeof(Basic));
@@ -138,6 +164,10 @@ unsigned short test_sort_by_age() {
     
     free(expected_data);
     free(data);
+#ifdef DEBUG
+    long end = currentTimeMillis();
+    printf("Загальний час виконання тесту %s: %ld sec\n", __FUNCTION__ ,(end-begin)/1000);
+#endif
     return is_success;
 }
 
@@ -152,7 +182,10 @@ unsigned short test_sort_by_age() {
  * @return стан проходження тестів: 1 - тести пройшли успішно, 0 - частина
  * тестів не пройшла
  */
-/*int main() {
+int main() {
+#ifdef DEBUG
+    float begin = currentTimeMillis();
+#endif
     unsigned short is_success = 1;
     is_success = test_creative_element();
     if (is_success == 0) {
@@ -172,6 +205,9 @@ unsigned short test_sort_by_age() {
     if (is_success == 1) {
         printf("Модульні тести пройдено успішно!");
     }
+#ifdef DEBUG
+    float end = currentTimeMillis();
+    printf("\nЗагальний час роботи тестів: %f sec\n", (end-begin)/1000);
+#endif
     return !is_success;
 }
-*/
