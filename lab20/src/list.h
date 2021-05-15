@@ -16,7 +16,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <libc.h>
-#define DEBUG
 
 
 /**
