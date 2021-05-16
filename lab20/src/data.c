@@ -6,8 +6,9 @@
  * @date 15-apr-2021
  * @version 1.0
  */
-#include "list.h"
 #include "data.h"
+#include <errno.h>
+#include <stdlib.h>
 
 void check_file(FILE *fmatrix) {
     if (fmatrix == NULL) {

@@ -10,11 +10,9 @@
 #pragma once
 #include "data.h"
 #include <stdio.h>
-#include <errno.h>
 #include <stdbool.h>
 #include <time.h>
 #include <string.h>
-#include <stdlib.h>
 #include <libc.h>
 
 

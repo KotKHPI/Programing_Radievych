@@ -182,7 +182,7 @@ unsigned short test_sort_by_age() {
  * @return стан проходження тестів: 1 - тести пройшли успішно, 0 - частина
  * тестів не пройшла
  */
-int main() {
+/*int main() {
 #ifdef DEBUG
     float begin = currentTimeMillis();
 #endif
@@ -210,4 +210,4 @@ int main() {
     printf("\nЗагальний час роботи тестів: %f sec\n", (end-begin)/1000);
 #endif
     return !is_success;
-}
+}*/
