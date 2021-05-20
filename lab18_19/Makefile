@@ -1,4 +1,4 @@
-targets = 1.bin test1.bin 2.bin text2.bin
+targets = 1.bin test1.bin 2.bin test2.bin
 
 CC = clang
 C_OPTS = -std=gnu11 -g -Wall -Wextra -Wformat-security -Wfloat-equal -Wshadow -Wconversion -Wlogical-not-parentheses -Wnull-dereference -I./1/src 1/src/lib.c
@@ -13,7 +13,7 @@ prep:
 	mkdir dist
 format:
 	doxygen
-compile: 1.bin test1.bin 2.bin
+compile: 1.bin test1.bin 2.bin test2.bin
 
 1.bin: 1/src/main.c
 	$(CC) $(C_OPTS) $< -o ./dist/$@

@@ -1,9 +1,9 @@
 /**
  * @file data.h
- * @brief Файл з описом структури птиць, перерахуванням критеріїв птиць та функцій оперування птахами
+ * @brief Файл з описом класу птиць, перерахуванням критеріїв птиць та методами оперування птахами
  *
  * @author Radievych V.
- * @date 22-apr-2021
+ * @date 20-may-2021
  * @version 1.0
  */
 
@@ -28,7 +28,7 @@ enum Sex {
 };
 
 /**
- * Структура домівки птаха
+ * Клас домівки птаха
  */
 
 class Feature {
@@ -38,12 +38,7 @@ private:
     int number_of_feeders; /**< кількість годівниць */
     enum Yes_no nest_nest; /**< наявність гнізда */
 public:
-    Feature() { //данные по умолчанию (конструктор)
-        square = 0;
-        height = 0;
-        number_of_feeders = 0;
-        nest_nest = Так;
-    }
+    Feature(): square(0), height(0), number_of_feeders(0), nest_nest(Так) { } //данные по умолчанию (конструктор)
     
     Feature(int square1, int height1, int number_of_feeders1, Yes_no nest_nest1){
         square = square1;
@@ -79,8 +74,21 @@ public:
     Yes_no GetNest_nest() const {
         return nest_nest;
     }
+    Feature (const Feature &other) { //копирование
+        this->square = other.square;
+        this->height = other.height;
+        this->number_of_feeders = other.number_of_feeders;
+        this->nest_nest = other.nest_nest;
+    }
+    
+    virtual ~Feature() { // :/ Bay-bay!
+        
+    }
 };
 
+/**
+ * Базовий клас "Птах"
+ */
 class Basic {
 private:
     enum Yes_no label; /**< чи окольцьована птаха */
@@ -89,15 +97,9 @@ private:
     Feature home; /**< структура домівки птаха (@link  Feature) */
     enum Sex sex; /**< стать птаха */
 public:
-    Basic() {
-        label = Так;
-        strcpy(name, "Птиця");
-        age = 0;
-        sex = Чоловіча;
-        
-    }
+    Basic(): label(Так), name("Птиця"), age(0), sex(Чоловіча) { } //конструктор1
     
-    Basic(Yes_no label1, char name1[], int age1, Feature home1, Sex sex1) {
+    Basic(Yes_no label1, char name1[], int age1, Feature home1, Sex sex1) { //конструктор2
         label = label1;
         strcpy(name, name1);
         age = age1;
@@ -115,7 +117,13 @@ public:
     void SetName (char n[15]) {
         strcpy(name, n);
     }
-    void printName() const;
+    
+    /**
+     * Функція виводу на екран
+     *
+     * Функція виводе всі даніх елементу типу Basic
+     */
+    void printAll() const;
     
     void SetSex (Sex x){
         sex = x;
@@ -123,12 +131,28 @@ public:
     Sex GetSex() const{
         return sex;
     }
-};
-
-class Ab {
-    int a;
-    int b;
-public:
-    Ab(): a(0), b(0) {}
     
+    void SetAge(int x) {
+        age = x;
+    }
+    int GetAge()const {
+        return age;
+    }
+    
+    Feature GetHome() {
+        return home;
+    }
+    
+    
+    Basic (const Basic& other){ //копирование
+        this->label = other.label;
+        strcpy(this->name, other.name);
+        this->age = other.age;
+        this->home = other.home;
+        this->sex = other.sex;
+    }
+    
+    virtual ~Basic() { // :/
+        
+    }
 };
