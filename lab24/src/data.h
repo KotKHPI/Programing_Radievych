@@ -96,16 +96,16 @@ public:
 class Basic {
 private:
     enum Yes_no label; /**< чи окольцьована птаха */
-    char name[15]; /**< назва виду*/
+    std::string name; /**< назва виду*/
     int age; /**< вік патаха, місяців*/
     Feature home; /**< структура домівки птаха (@link  Feature) */
     enum Sex sex; /**< стать птаха */
 public:
     Basic(): label(Так), name("Птиця"), age(0), sex(Чоловіча) { } //конструктор1
     
-    Basic(Yes_no label1, char name1[], int age1, Feature home1, Sex sex1) { //конструктор2
+    Basic(Yes_no label1, std::string name1, int age1, Feature home1, Sex sex1) { //конструктор2
         label = label1;
-        strcpy(name, name1);
+        name = name1;
         age = age1;
         home = home1;
         sex = sex1;
@@ -165,8 +165,8 @@ public:
         return label;
     }
     
-    void SetName (char n[15]) {
-        strcpy(name, n);
+    void SetName (std::string n) {
+        name = n;
     }
     
     /**
@@ -198,7 +198,7 @@ public:
     
     Basic (Basic& other){ //копирование
         this->label = other.label;
-        strcpy(this->name, other.name);
+        this->name = other.name;
         this->age = other.age;
         this->home = other.home;
         this->sex = other.sex;
