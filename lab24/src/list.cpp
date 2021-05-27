@@ -1,6 +1,6 @@
 /**
  * @file list.cpp
- * @brief Файл з реалізацією функцій для list.h
+ * @brief Файл з реалізацією методів для list.h
  *
  * @author Radievych V.
  * @date 20-may-2021

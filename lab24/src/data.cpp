@@ -1,6 +1,6 @@
 /**
  * @file data.cpp
- * @brief Файл з реалізацією функцій для data.h
+ * @brief Файл з реалізацією методів для data.h
  *
  * @author Radievych V.
  * @date 20-may-2021
