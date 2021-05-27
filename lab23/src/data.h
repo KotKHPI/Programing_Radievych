@@ -93,7 +93,7 @@ class Basic {
 private:
     enum Yes_no label; /**< чи окольцьована птаха */
     char name[15]; /**< назва виду*/
-    int age; /**< вік патаха, місяців*/
+    int age; /**< вік птаха, місяців*/
     Feature home; /**< структура домівки птаха (@link  Feature) */
     enum Sex sex; /**< стать птаха */
 public:

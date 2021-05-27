@@ -41,17 +41,13 @@ int main() {
     Feature home1(4, 5, 6, Ні);
 
     Basic bird(Так, "KOT", 1, home, Чоловіча);
-    Basic bird1(Ні, "Чапалах", 2, home1, Жіноча);
     Basic bird2(Ні, "КОТ2", 3, home1, Жіноча);
-    Basic r;
-
     
     List b(2);
     b.Paste(bird, 0);
     b.Paste(bird2, 1);
-    b.AddBird(bird1);
+    b.AddBird(bird);
     b.RemoveBird(0);
-    r = b.GetBird(1);
     b.ShowAll();
     b.FindPercentage();
     
