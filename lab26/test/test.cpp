@@ -17,7 +17,7 @@
  * тестів не пройшла
  */
 unsigned short test_AddLayer_bird() {
-    printf("Запуск тесту %s ... \n", __FUNCTION__);
+    std::cout << "Запуск тесту " << __FUNCTION__ << " ... \n";
     unsigned short is_success = 1;
     Basic a;
     List_Layer_Birds pr(1);
@@ -46,7 +46,7 @@ unsigned short test_AddLayer_bird() {
  * тестів не пройшла
  */
 unsigned short test_AddExotic_bird() {
-    printf("Запуск тесту %s ... \n", __FUNCTION__);
+    std::cout << "Запуск тесту " << __FUNCTION__ << " ... \n";
     unsigned short is_success = 1;
     List_Exotic_birds pr(1);
     Basic a;
@@ -76,7 +76,7 @@ unsigned short test_AddExotic_bird() {
  * тестів не пройшла
  */
 unsigned short test_RemoveLayer_bird() {
-    printf("Запуск тесту %s ... \n", __FUNCTION__);
+    std::cout << "Запуск тесту " << __FUNCTION__ << " ... \n";
     unsigned short is_success = 1;
     List_Layer_Birds pr(1);
     Basic a;
@@ -106,7 +106,7 @@ unsigned short test_RemoveLayer_bird() {
  * тестів не пройшла
  */
 unsigned short test_RemoveExotic_birds() {
-    printf("Запуск тесту %s ... \n", __FUNCTION__);
+    std::cout << "Запуск тесту " << __FUNCTION__ << " ... \n";
     unsigned short is_success = 1;
     List_Exotic_birds pr(1);
     Basic a;
@@ -289,51 +289,51 @@ unsigned short test_Exotic_birds_to_string() {
  * @return стан проходження тестів: 1 - тести пройшли успішно, 0 - частина
  * тестів не пройшла
  */
-/*int main() {
+int main() {
     unsigned short is_success = 1;
     is_success = test_AddLayer_bird();
     if (is_success == 0) {
-        printf("Тест test_AddLayer_bird не пройдено!\n");
+        std::cout << "Тест test_AddLayer_bird не пройдено!\n";
     }
     
     is_success = test_AddExotic_bird();
     if (is_success == 0) {
-        printf("Тест test_AddExotic_bird не пройдено!\n");
+        std::cout << "Тест test_AddExotic_bird не пройдено!\n";
     }
     
     is_success = test_RemoveLayer_bird();
     if (is_success == 0) {
-        printf("Тест test_RemoveLayer_bird не пройдено!\n");
+        std::cout << "Тест test_RemoveLayer_bird не пройдено!\n";
     }
     
     is_success = test_RemoveExotic_birds();
     if (is_success == 0) {
-        printf("Тест test_RemoveExotic_birds не пройдено!\n");
+        std::cout << "Тест test_RemoveExotic_birds не пройдено!\n";
     }
     
     is_success = test_Layer_bird_by_string();
     if (is_success == 0) {
-        printf("Тест test_Layer_bird_by_string не пройдено!\n");
+        std::cout << "Тест test_Layer_bird_by_string не пройдено!\n";
     }
     
     is_success = test_Exotic_birds_by_string();
     if (is_success == 0) {
-        printf("Тест test_Exotic_birds_by_string не пройдено!\n");
+        std::cout << "Тест test_Exotic_birds_by_string не пройдено!\n";
     }
     
     is_success = test_Layer_bird_to_string();
     if (is_success == 0) {
-        printf("Тест test_Layer_bird_to_string не пройдено!\n");
+        std::cout << "Тест test_Layer_bird_to_string не пройдено!\n";
     }
     
     is_success = test_Exotic_birds_to_string();
     if (is_success == 0) {
-        printf("Тест test_Exotic_birds_to_string не пройдено!\n");
+        std::cout << "Тест test_Exotic_birds_to_string не пройдено!\n";
     }
     
     if (is_success == 1) {
-        printf("Модульні тести пройдено успішно!");
+        std::cout << "Модульні тести пройдено успішно!";
     }
 
     return !is_success;
-}*/
+}
