@@ -102,7 +102,7 @@ unsigned short test_RemoveBird() {
  * @return стан проходження тестів: 1 - тести пройшли успішно, 0 - частина
  * тестів не пройшла
  */
-/*int main() {
+int main() {
     unsigned short is_success = 1;
     is_success = test_AddBird();
     if (is_success == 0) {
@@ -119,4 +119,4 @@ unsigned short test_RemoveBird() {
     }
 
     return !is_success;
-}*/
+}
