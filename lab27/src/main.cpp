@@ -43,9 +43,7 @@ int main() {
     //b.RemoveBird(1);
     List a;
     a.readFromFile(fileIn);
-    //a.writeToFile(fileOut);
-    int qw;
-    std::cin >> qw;
+    a.writeToFile(fileOut);
     
     return 0;
 }

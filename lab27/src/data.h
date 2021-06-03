@@ -395,6 +395,10 @@ public:
      */
     void printOne(std::ofstream &file) override final;
     
+    /**
+     * Конструктор копіювання
+     */
+    Layer_Birds (Layer_Birds &other) : Basic(other), take_off(other.take_off), rifle(other.rifle) { }
     
     virtual ~Layer_Birds() {
         
@@ -489,6 +493,11 @@ public:
      * Метод виводе у файл оформлений елемент класу (@link Exotic_birds)
      */
     void printOne(std::ofstream &file) override final;
+    
+    /**
+     * Конструктор копіювання
+     */
+    Exotic_birds (Exotic_birds &other) : Basic(other), min_temp(other.min_temp), max_temp(other.max_temp) { }
     
     virtual ~Exotic_birds() {
         
